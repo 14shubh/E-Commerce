@@ -3,5 +3,11 @@ exports.loginPage = (req, res, next) => {
 }
 
 exports.registrationPage = (req, res, next) => {
-    res.render('user_views/registration.ejs');
+    res.render('user_views/register', {
+        title: 'Registration'
+    });
+}
+
+exports.profilePage = (req, res, next) => {
+    res.render('user_views/profile');
 }

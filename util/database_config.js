@@ -2,7 +2,7 @@ const mysql = require('mysql');
 module.exports = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'password',
+    password: 'root',
     connectionLimit: 100,
-    database: 'database name'
+    database: 'e_commerce'
 });
