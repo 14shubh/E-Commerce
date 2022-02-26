@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <%- include('../partial/bootstrap.ejs')%>
+        <link rel="stylesheet" href="/css/style.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <%- include('./admin_partial/navigation_bar.ejs')%>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12">
+                  <table class="table">
+                      <thead>
+                          <tr>
+                              <th>image</th>
+                              <th>Name</th>
+            
+                          </tr>
+                      </thead>
+                      <tbody>
+                         <%
+                            for(category of categoryList){%>
+                           <tr id="row<%=category.id%>">
+                                         <td>
+                                   <img src="../categoryImages/<%=category.category_Image%>" width="300px" heigth="300px"/>
+                               </td>
+                               <td><%=category.category_Name%></td>
+                               
+                           </tr> 
+                         <%}%>    
+                      </tbody>
+                   </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
